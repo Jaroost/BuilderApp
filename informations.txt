@@ -1,0 +1,21 @@
+procedure:
+-create package.json --> npm init
+-install gulp --> npm install --save-dev gulp
+-install typescript --> npm install --save-dev typescript
+-install ts-node -->npm install --save-dev ts-node
+-add script for gulp in package.json --> script section add "gulp":"gulp"
+-install typings --> npm install --save-dev typings
+-add script for typings in package.json --> script section add "typings": "typings"
+-init typings file --> npm run typings -- init
+-add gulp to for gulpfile.ts --> npm run typings -- install gulp --save --ambient
+-create the gulpfile.ts
+-in gulpfile.ts import gulp --> import * as gulp from 'gulp'
+-add tsconfig.json file and add :
+{
+  "exclude": [
+    "node_modules",
+    "typings/main",
+    "typings/main.d.ts"
+  ]
+}
+-
