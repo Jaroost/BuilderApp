@@ -6,14 +6,24 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "gulp": "gulp",
-    "scripts": "gulp scripts"
+    "typings": "typings",
+    "scripts": "gulp scripts",
+    "debug.server": "node-debug server_dist/server.js"
   },
   "author": "Jaroost",
   "license": "MIT",
   "devDependencies": {
     "gulp": "^3.9.1",
     "gulp-concat": "^2.6.0",
+    "gulp-typescript": "^2.13.0",
     "gulp-uglify": "^1.5.3",
-    "gulp-util": "^3.0.7"
+    "gulp-util": "^3.0.7",
+    "node-inspector": "^0.12.8",
+    "ts-node": "^0.7.1",
+    "typescript": "^1.8.9",
+    "typings": "^0.7.12"
+  },
+  "dependencies": {
+    "express": "^4.13.4"
   }
 }

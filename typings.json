@@ -1,0 +1,24 @@
+{
+  "name": "builder_app",
+  "version": false,
+  "dependencies": {},
+  "ambientDependencies": {
+    "chalk": "registry:dt/chalk#0.4.0+20160317120654",
+    "express": "registry:dt/express#4.0.0+20160317120654",
+    "express-serve-static-core": "registry:dt/express-serve-static-core#0.0.0+20160322035842",
+    "gulp": "registry:dt/gulp#3.8.0+20160316155526",
+    "gulp-concat": "registry:dt/gulp-concat#0.0.0+20160316155526",
+    "gulp-typescript": "registry:dt/gulp-typescript#0.0.0+20160317120654",
+    "gulp-uglify": "registry:dt/gulp-uglify#0.0.0+20160316155526",
+    "gulp-util": "registry:dt/gulp-util#0.0.0+20160316155526",
+    "mime": "registry:dt/mime#0.0.0+20160316155526",
+    "node": "registry:dt/node#4.0.0+20160330064709",
+    "orchestrator": "registry:dt/orchestrator#0.0.0+20160316155526",
+    "q": "registry:dt/q#0.0.0+20160323171452",
+    "serve-static": "registry:dt/serve-static#0.0.0+20160317120654",
+    "source-map": "registry:dt/source-map#0.0.0+20160317120654",
+    "through2": "registry:dt/through2#2.0.0+20160317120654",
+    "uglify-js": "registry:dt/uglify-js#2.6.1+20160316155526",
+    "vinyl": "registry:dt/vinyl#1.1.0+20160316155526"
+  }
+}
