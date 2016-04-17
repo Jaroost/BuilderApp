@@ -1,12 +1,12 @@
 import * as gulp from 'gulp';
-import * as util from 'gulp-util';
+import * as gutil from 'gulp-util';
 import * as concat from 'gulp-concat';
 import * as uglify from 'gulp-uglify';
 import * as ts from 'gulp-typescript';
 
 
 gulp.task('default', function(){
-	console.log('ici');
+	console.log('here!');
 });
 
 gulp.task('scripts', function(){
@@ -18,9 +18,11 @@ gulp.task('scripts', function(){
 });
 
 gulp.task('ts', function(){
-	console.log('Compile typescripts');
-	gulp.src('server/*.ts')
+	let filenames = 'server/*.ts';
+	gutil.log(gutil.colors.bgBlack.white('Compiling file from '), gutil.colors.bgBlack.magenta(filenames));
+	gulp.src(filenames)
 		.pipe(ts())
 		// .pipe(uglify())
 		.pipe(gulp.dest('server_dist/'));
+	gutil.beep();
 });

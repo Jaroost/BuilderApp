@@ -1,14 +1,13 @@
 {
   "name": "builder_app",
-  "version": "1.0.0",
+  "version": "0.0.0",
   "description": "for building awsome apps!",
-  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "gulp": "gulp",
-    "typings": "typings",
+    "postinstall": "typings install",
     "scripts": "gulp scripts",
-    "debug.server": "node-debug server_dist/server.js"
+    "debug.server": "node-debug server/server.ts",
+    "typings": "typings",
+    "gulp": "gulp"
   },
   "author": "Jaroost",
   "license": "MIT",
@@ -24,6 +23,22 @@
     "typings": "^0.7.12"
   },
   "dependencies": {
+    "chalk": "^1.1.3",
     "express": "^4.13.4"
-  }
+  },
+  "//": [
+    "This is a comments section!",
+    "Postinstall script: Run after npm install (install the definitions for typescript)",
+    "debug.server script: Run server/server.ts in debug mode with node-inspector",
+    "dependencies",
+    "gulp to automate tasks",
+    "gulp-concat to concat files",
+    "gulp-typescript to compile files",
+    "gulp-uglify to minify files",
+    "gulp-util to have to utily in gulp taks (beep, log, ...)",
+    "node-inspector to debug express server applications",
+    "ts-node and typescript must be install for compiling typescripts files",
+    "typings installs typescript type definitions in the folder typings",
+    "the command typings install all the required definitions for typescript for this project"
+  ]
 }
