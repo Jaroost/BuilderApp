@@ -2,3 +2,5 @@
 node_modules
 typings
 server_dist
+dist
+gulpfile.js
