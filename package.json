@@ -1,11 +1,11 @@
 {
   "name": "builder_app",
   "version": "0.0.0",
-  "description": "for building awsome apps!",
+  "description": "for building awesome apps!",
   "scripts": {
     "postinstall": "typings install",
     "scripts": "gulp scripts",
-    "debug.server": "node-debug server/server.ts",
+    "debug.server": "node-debug server_dist/server.js",
     "typings": "typings",
     "gulp": "gulp"
   },
