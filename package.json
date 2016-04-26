@@ -38,7 +38,7 @@
     "gulp-concat to concat files",
     "gulp-typescript to compile files",
     "gulp-uglify to minify files",
-    "gulp-util to have to utily in gulp taks (beep, log, ...)",
+    "gulp-util to have utilities in gulp taks (beep, log, ...)",
     "node-inspector to debug express server applications",
     "ts-node and typescript must be install for compiling typescripts files",
     "typings installs typescript type definitions in the folder typings",
