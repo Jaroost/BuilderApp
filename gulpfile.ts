@@ -1,20 +1,19 @@
+import {loadTasks} from './tools/utils';
+import {TASK_DIR} from './tools/config';
 import * as gulp from 'gulp';
-import * as gutil from 'gulp-util';
-import * as ts from 'gulp-typescript';
-import {clean, loadTasks} from './tasks/tools/tools';
+import * as runSequence from 'run-sequence';
 
-gulp.task('serve.dev', (done: any) =>{
-	console.log('passage');
-	clean('test');
-	loadTasks('./tasks/tasks');
-});
 
-gulp.task('ts', () => {
-	let filenames = 'tasks/tools/seed/task_tools.ts';
-	gutil.log(gutil.colors.bgBlack.white('Compiling file from '), gutil.colors.bgBlack.magenta(filenames));
-	gulp.src(filenames)
-		.pipe(ts())
-		// .pipe(uglify())
-		.pipe(gulp.dest('server_dist/'));
-	gutil.beep();
-});
+loadTasks(TASK_DIR);
+
+gulp.task('build.dev', (done: any) =>
+	runSequence(
+		'build.dev.assets',
+		'build.dev.js',
+		done));
+
+gulp.task('serve.dev', (done: any) =>
+	runSequence('build.dev',
+		'server.dev',
+		'watch.dev',
+		done));

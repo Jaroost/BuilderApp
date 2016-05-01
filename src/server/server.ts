@@ -1,5 +1,3 @@
-///<reference path="../typings/browser.d.ts"/>
-
 import * as express from 'express';
 
 const EXPRESS_APP = express();
