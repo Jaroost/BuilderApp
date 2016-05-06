@@ -15,7 +15,6 @@
   "devDependencies": {
     "browser-sync": "^2.12.5",
     "connect-history-api-fallback": "^1.2.0",
-    "es6-promise": "^3.1.2",
     "gulp": "^3.9.1",
     "gulp-concat": "^2.6.0",
     "gulp-load-plugins": "^1.2.2",
