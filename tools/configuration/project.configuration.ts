@@ -8,14 +8,18 @@ export class ProjectConfiguration{
 	TASK_DIR:string = `${process.cwd()}/tools/tasks`;
 
 	APP_BASE: string = '/';
-	PORT: number = 3000;
 
 	BROWSER_SYNC_CONFIG: any = {
 		middleware: [require('connect-history-api-fallback')({ index: `/index.html` })],
 		port: 3000,
 		startPath: '/',
 		server: {
-			baseDir: `${this.DEV_APP_DIR}`
+			baseDir: `dist/empty`,
+			routes: {
+				['/dist/dev/app']: 'dist/dev/app',
+				['/node_modules']: 'node_modules',
+				['']: 'dist/dev/app'
+			}
 		}
 	};
 }
