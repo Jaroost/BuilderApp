@@ -8,5 +8,5 @@ import {Component} from 'angular2/core';
     `
 })
 export class AppComponent {
-  title = 'An Angular 2 Force Awakens';
+  title = 'An Angular 2 Force Awakens test super cool';
 }
