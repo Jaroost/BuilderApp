@@ -6,40 +6,38 @@
 </head>
 <body>
 	<my-app>loading..</my-app>
-	<script src="/node_modules/systemjs/dist/system-polyfills.src.js"></script>
-	<script src="/node_modules/es6-shim/es6-shim.js"></script>	
-	<script src="/node_modules/systemjs/dist/system.src.js"></script>
-	<script src="/node_modules/angular2/bundles/angular2-polyfills.js"></script>
+  <script src="/node_modules/systemjs/dist/system-polyfills.src.js"></script>
+  <script src="/node_modules/reflect-metadata/Reflect.js"></script>
+  <script src="/node_modules/es6-shim/es6-shim.js"></script>
+  <script src="/node_modules/systemjs/dist/system.src.js"></script>
 	<script>
 			System.config({
-		"defaultJSExtensions": true,
-		"packageConfigPaths": [
-			"/node_modules/*/package.json",
-			"/node_modules/**/package.json"
-		],
-		"paths": {
-			"main": "/main",
-			"angular2/*": "/angular2/*",
-			"app/*": "/app/*",
-			"*": "/node_modules/*"
-		},
-		"packages": {
-			"angular2": {
-			"defaultExtension": false
-			}
-		}
-		})
+  "defaultJSExtensions": true,
+  "packageConfigPaths": [
+    "/node_modules/*/package.json",
+    "/node_modules/**/package.json",
+    "/node_modules/@angular/*/package.json"
+  ],
+  "paths": {
+    "main": "/main",
+    "rxjs/*": "/rxjs/*",
+    "app/*": "/app/*",
+    "*": "/node_modules/*"
+  },
+  "packages": {
+    "rxjs": {
+      "defaultExtension": false
+    }
+  }
+})
   </script>
-  
-  <script src="/node_modules/angular2/bundles/angular2.js"></script>
-  <script src="/node_modules/angular2/bundles/router.js"></script>
-  <script src="/node_modules/angular2/bundles/http.js"></script>
+	<script src="/node_modules/zone.js/dist/zone.js"></script>
+  <script src="/node_modules/rxjs/bundles/Rx.js"></script>
   
   <script>
   System.import('main')
     .catch(function (e) {
-      console.error(e,
-        'Report this error at https://github.com/jaroost/builder_app/issues');
+      console.error(e, 'Report this error at https://github.com/jaroost/builder_app/issues');
     });
   </script>
 </body>
