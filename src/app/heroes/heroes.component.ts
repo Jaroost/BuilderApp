@@ -13,7 +13,7 @@ export class HeroesComponent implements OnInit {
 
     ngOnInit() {
         this.heroesList=[new Hero(1, 'Antoine', 'SuperAdmin'), new Hero(2, 'Claude', 'SuperAdmin2')];
-        for(let i=0 ; i<10000; i++){
+        for(let i=0 ; i<200; i++){
             this.heroesList.push(new Hero(i+10, `Test#${i}`, `description#${i}`))
         }
      }
