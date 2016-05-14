@@ -46,6 +46,7 @@
     "es6-promise": "*",
     "es6-shim": "*",
     "express": "*",
+    "lodash": "^4.12.0",
     "reflect-metadata": "*",
     "rxjs": "5.0.0-beta.6",
     "systemjs": "*",
