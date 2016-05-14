@@ -27,6 +27,7 @@
     "isstream": "*",
     "merge-stream": "*",
     "node-inspector": "*",
+    "proxy-middleware": "*",
     "rimraf": "*",
     "run-sequence": "*",
     "ts-node": "*",
