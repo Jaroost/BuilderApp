@@ -21,7 +21,7 @@ export class User {
         return users;
     }
     
-    tostring(){
+    toString(){
         return `${this.first_name} ${this.last_name} (${this.id})`;
     }
 }
