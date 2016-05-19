@@ -18,7 +18,9 @@
     "gulp": "*",
     "gulp-concat": "*",
     "gulp-load-plugins": "*",
+    "gulp-nodemon": "*",
     "gulp-plumber": "*",
+    "gulp-shell": "*",
     "gulp-sourcemaps": "*",
     "gulp-typescript": "*",
     "gulp-uglify": "*",
@@ -31,6 +33,7 @@
     "rimraf": "*",
     "run-sequence": "*",
     "ts-node": "*",
+    "tslint": "*",
     "typescript": "*",
     "typings": "*"
   },

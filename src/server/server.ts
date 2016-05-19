@@ -5,7 +5,7 @@ import {User} from './user';
 
 const EXPRESS_APP = express();
 
-let users=User.RandomUsers(1000000);
+let users=User.RandomUsers(10000);
 
 EXPRESS_APP.get('/', (req: express.Request, res: express.Response) => {
 	res.json('Welcome to the builder APP REST API!');

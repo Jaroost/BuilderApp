@@ -9,12 +9,12 @@ gulp.task('build.dev', (done: any) =>
 	runSequence(
 		'build.dev.assets',
 		'build.dev.js',
-		'serve.express',
 		done));
 
 gulp.task('serve.dev', (done: any) =>
 	runSequence('build.dev',
 		'server.dev',
+		'serve.express',
 		'watch.dev',
 		done));
 		
