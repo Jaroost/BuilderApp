@@ -6,6 +6,7 @@ import * as chalk from 'chalk';
 
 export = () => {
     nodemon({
-        script: 'dist/dev/server/server.js'
+        script: 'dist/dev/server/server.js',
+        watch: ['dist/dev/server']
     });
 };
