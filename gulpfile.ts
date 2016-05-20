@@ -18,8 +18,3 @@ gulp.task('serve.dev', (done: any) =>
 		'watch.dev',
 		done));
 		
-gulp.task('test', (done:any) =>{
-	//runSequence('serve.express', done);
-});
-
-
