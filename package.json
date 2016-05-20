@@ -8,7 +8,8 @@
     "debug.server": "node-debug server_dist/server.js",
     "typings": "typings",
     "gulp": "gulp",
-    "node-debug": "node-debug"
+    "node-debug": "node-debug",
+    "start" : "gulp serve.dev"
   },
   "author": "Jaroost",
   "license": "MIT",
@@ -52,7 +53,7 @@
     "express": "*",
     "lodash": "*",
     "reflect-metadata": "*",
-    "rxjs": "*",
+    "rxjs": "5.0.0-beta.6",
     "systemjs": "*",
     "zone.js": "*"
   },
