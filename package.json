@@ -9,7 +9,7 @@
     "typings": "typings",
     "gulp": "gulp",
     "node-debug": "node-debug",
-    "start" : "gulp serve.dev"
+    "start": "gulp serve.dev"
   },
   "author": "Jaroost",
   "license": "MIT",
@@ -47,10 +47,12 @@
     "@angular/platform-browser": "*",
     "@angular/platform-browser-dynamic": "*",
     "@angular/router": "*",
+    "angular2-jwt": "*",
     "chalk": "*",
     "es6-promise": "*",
     "es6-shim": "*",
     "express": "*",
+    "express-jwt": "*",
     "lodash": "*",
     "reflect-metadata": "*",
     "rxjs": "5.0.0-beta.6",
