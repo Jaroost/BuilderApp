@@ -1,4 +1,5 @@
 import {Component} from '@angular/core';
+//import {Router,Routes,ROUTER_DIRECTIVES} from '@angular/router';
 import {HeroesComponent} from './heroes/heroes.component';
 import {Auth0Component} from './auth0/auth0.component';
 
