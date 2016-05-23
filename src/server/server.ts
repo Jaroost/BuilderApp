@@ -7,7 +7,7 @@ import {UserContainer} from './user.container';
 
 const EXPRESS_APP = express();
 
-const userContainer=new UserContainer(200);
+const userContainer=new UserContainer(400);
 const JWT_CHECK=jwt({
 	secret: new Buffer("VqPEjyiGncpqLZoPFgZNUIQsEcVRbZ4vcjN85uQF5cTaAHCIauUacPTdQ_f0OzZ1", 'base64'),
 	audience: 'bUfoWb8hk8OsP9VUV2gpr7WlFE5LOWb9'
