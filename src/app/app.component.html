@@ -1,4 +1,7 @@
-<a [routerLink]="['Profile']">Profile</a>
-<a [routerLink]="['Test']">Test</a>
-<auth0></auth0>
+<h1>Welcome to Angular2 with Auth0</h1>
+<button *ngIf="!loggedIn()" (click)="login()">Login</button>
+<button *ngIf="loggedIn()" (click)="logout()">logout</button>
+
+<button *ngIf="loggedIn()" [routerLink]="['Profile']">Profile</button>
+<button [routerLink]="['Test']">Test</button>
 <router-outlet></router-outlet>
