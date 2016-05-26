@@ -47,6 +47,7 @@
     "@angular/platform-browser": "*",
     "@angular/platform-browser-dynamic": "*",
     "@angular/router": "*",
+    "@angular/router-deprecated": "*",
     "angular2-jwt": "*",
     "chalk": "*",
     "es6-promise": "*",

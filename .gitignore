@@ -4,3 +4,4 @@ typings
 server_dist
 dist
 gulpfile.js
+npm-debug.log
