@@ -1,8 +1,9 @@
 import {Component} from '@angular/core';
-import { RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS } from '@angular/router-deprecated';
+import { RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS, Router } from '@angular/router-deprecated';
 import {HeroesComponent} from './heroes/heroes.component';
 import {ProfileComponent} from './profile/profile.component';
 import {TestComponent} from './test/test.component';
+import {RootComponent} from './root/root.component';
 import { AuthHttp, tokenNotExpired , JwtHelper} from 'angular2-jwt';
 declare var Auth0Lock; //indicate to Typescrit hey man the Auth0Lock is availlable in the cd.auth0.com/js/lock-8.1.min.js!
 
@@ -15,21 +16,26 @@ declare var Auth0Lock; //indicate to Typescrit hey man the Auth0Lock is availlab
     providers: [ROUTER_PROVIDERS]
 })
 @RouteConfig([
-  {
-    path: '/profile',
-    name: 'Profile',
-    component: ProfileComponent
-  },
-  {
-    path: '/test',
-    name: 'Test',
-    component: TestComponent
-  }
+    {
+        path: '/',
+        name: 'Root',
+        component: RootComponent
+    },
+    {
+        path: '/profile',
+        name: 'Profile',
+        component: ProfileComponent
+    },
+    {
+        path: '/test',
+        name: 'Test',
+        component: TestComponent
+    }
 ])
 export class AppComponent {
   lock = new Auth0Lock('bUfoWb8hk8OsP9VUV2gpr7WlFE5LOWb9', 'antoinejaquet.eu.auth0.com');
   jwtHelper: JwtHelper=new JwtHelper();
-  constructor() { }
+  constructor(private router:Router) { }
 
   ngOnInit() { }
   
@@ -53,6 +59,7 @@ export class AppComponent {
   logout() {
       localStorage.removeItem('profile');
       localStorage.removeItem('id_token');
+      this.router.navigate(['Root']);
   }
 
   loggedIn() {
