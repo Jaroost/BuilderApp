@@ -2,6 +2,7 @@ import * as express from 'express';
 import * as util from 'gulp-util';
 import * as chalk from 'chalk';
 import * as jwt from 'express-jwt';
+import * as _ from 'lodash';
 import {User} from './user';
 import {UserContainer} from './user.container';
 
@@ -13,13 +14,19 @@ const JWT_CHECK=jwt({
 	audience: 'bUfoWb8hk8OsP9VUV2gpr7WlFE5LOWb9'
 });
 
+const QUOTES:string[]=[
+	"Hey I'm this API server!",
+	"API Server says hello to you visitor!",
+	"You are welcome!"
+]
+
 EXPRESS_APP.use('/', JWT_CHECK);
 EXPRESS_APP.get('/', (req: express.Request, res: express.Response) => {
 	res.json('Welcome to the builder APP REST API!');
 });
 
 EXPRESS_APP.get('/hello', (req: express.Request, res: express.Response) =>{
-	res.json('API server says hello to you visitor!');
+	res.json(_.sample(QUOTES));
 });
 
 EXPRESS_APP.get('/users', (req: express.Request, res: express.Response)=>{
