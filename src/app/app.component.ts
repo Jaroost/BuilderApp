@@ -1,5 +1,7 @@
 import {Component} from '@angular/core';
 import { RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS, Router } from '@angular/router-deprecated';
+import {MATERIAL_DIRECTIVES, MATERIAL_PROVIDERS} from "ng2-material/all";
+
 import {HeroesComponent} from './heroes/heroes.component';
 import {ProfileComponent} from './profile/profile.component';
 import {TestComponent} from './test/test.component';
