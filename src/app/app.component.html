@@ -1,7 +1,10 @@
-<h1>Welcome to Angular2 with Auth0</h1>
-<button *ngIf="!loggedIn()" (click)="login()" md-raised-button class="md-raised">Login</button>
-<button *ngIf="loggedIn()" (click)="logout()" md-raised-button class="md-raised">logout</button>
 
-<button *ngIf="loggedIn()" [routerLink]="['Profile']" md-raised-button class="md-raised">Profile</button>
-<button [routerLink]="['Test']" md-raised-button class="md-raised">Test</button>
+<md-toolbar [color]="primary">
+<span>Builder App</span>
+<button *ngIf="!loggedIn()" (click)="login()" md-raised-button>Login</button>
+<button *ngIf="loggedIn()" (click)="logout()"md-raised-button>logout</button>
+
+<button *ngIf="loggedIn()" [routerLink]="['Profile']" md-raised-button>Profile</button>
+<button [routerLink]="['Test']" md-raised-button>Test</button>
+</md-toolbar>
 <router-outlet></router-outlet>
