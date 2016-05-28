@@ -1,10 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import {Hero} from './hero';
+import {MATERIAL_DIRECTIVES} from 'ng2-material';
 
 @Component({
     moduleId: module.id,
     selector: 'heroes',
     templateUrl: 'heroes.component.html',
+    directives: [MATERIAL_DIRECTIVES],
     styleUrls: ['heroes.component.css']
 })
 export class HeroesComponent implements OnInit {

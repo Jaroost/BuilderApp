@@ -1,18 +1,19 @@
 <h1>Hello super cool title for Heroes component!</h1>
 
-<table>
-    <tr>
-        <th>Id</th>
-        <th>Test</th>
-        <th>name</th>
-    </tr>
-    <tbody *ngFor="let hero of heroesList">
-        <tr>
-        <td>{{hero.id}}</td>
-        <td>{{hero.name}}</td>
-        <td>{{hero.description}}</td>
-        </tr>
-    </tbody>
-    
-</table>
 
+<md-data-table layout-fill>
+  <thead>
+  <tr>
+    <th class="md-text-cell">Id</th>
+    <th>Test</th>
+    <th>Name</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let hero of heroesList">
+    <td class="md-text-cell">{{hero.id}}</td>
+    <td>{{hero.name}}</td>
+    <td>{{hero.description}}</td>
+  </tr>
+  </tbody>
+</md-data-table>
