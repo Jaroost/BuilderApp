@@ -1,6 +1,8 @@
 import {Component} from '@angular/core';
 import { RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS, Router } from '@angular/router-deprecated';
 import { MATERIAL_DIRECTIVES} from "ng2-material";
+import {MdToolbar} from '@angular2-material/toolbar';
+
 import {HeroesComponent} from './heroes/heroes.component';
 import {ProfileComponent} from './profile/profile.component';
 import {TestComponent} from './test/test.component';
@@ -13,7 +15,7 @@ declare var Auth0Lock; //indicate to Typescrit hey man the Auth0Lock is availlab
     selector: 'my-app',
     templateUrl: 'app.component.html',
     styleUrls: ['app.component.css'],
-    directives: [HeroesComponent, ROUTER_DIRECTIVES, MATERIAL_DIRECTIVES],
+    directives: [HeroesComponent, ROUTER_DIRECTIVES, MATERIAL_DIRECTIVES, MdToolbar],
     providers: [ROUTER_PROVIDERS]
 })
 @RouteConfig([
@@ -34,6 +36,7 @@ declare var Auth0Lock; //indicate to Typescrit hey man the Auth0Lock is availlab
     }
 ])
 export class AppComponent {
+    
   lock = new Auth0Lock('bUfoWb8hk8OsP9VUV2gpr7WlFE5LOWb9', 'antoinejaquet.eu.auth0.com');
   jwtHelper: JwtHelper=new JwtHelper();
   constructor(private router:Router) { }

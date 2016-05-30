@@ -1,10 +1,11 @@
 
-<md-toolbar [color]="primary">
+<md-toolbar [color]="green">
 <span>Builder App</span>
-<button *ngIf="!loggedIn()" (click)="login()" md-raised-button>Login</button>
-<button *ngIf="loggedIn()" (click)="logout()"md-raised-button>logout</button>
+<span flex></span>
+<button *ngIf="!loggedIn()" (click)="login()" md-raised-button class="md-raised md-primary">Login</button>
+<button *ngIf="loggedIn()" (click)="logout()"md-raised-button class="md-raised md-primary">logout</button>
 
-<button *ngIf="loggedIn()" [routerLink]="['Profile']" md-raised-button>Profile</button>
-<button [routerLink]="['Test']" md-raised-button>Test</button>
+<button *ngIf="loggedIn()" [routerLink]="['Profile']" md-raised-button class="md-raised md-primary">Profile</button>
+<button [routerLink]="['Test']" md-raised-button class="md-raised md-primary">Test</button>
 </md-toolbar>
 <router-outlet></router-outlet>
