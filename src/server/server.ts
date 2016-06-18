@@ -25,6 +25,16 @@ EXPRESS_APP.get('/', (req: express.Request, res: express.Response) => {
 	res.json('Welcome to the builder APP REST API!');
 });
 
+EXPRESS_APP.get('/users', (req: express.Request, res: express.Response)=>{
+	res.json({
+		totalCount:1000,
+		 data: [
+			 {id: 1, name:"test"},
+			 {id: 2, name: "test2"}
+		]
+	});
+});
+
 EXPRESS_APP.get('/hello', (req: express.Request, res: express.Response) =>{
 	res.json(_.sample(QUOTES));
 });

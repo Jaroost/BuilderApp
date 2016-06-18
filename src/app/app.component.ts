@@ -6,6 +6,7 @@ import {MdToolbar} from '@angular2-material/toolbar';
 import {HeroesComponent} from './heroes/heroes.component';
 import {ProfileComponent} from './profile/profile.component';
 import {TestComponent} from './test/test.component';
+import {UsersComponent} from './users/users.component';
 import {RootComponent} from './root/root.component';
 import { AuthHttp, tokenNotExpired , JwtHelper} from 'angular2-jwt';
 declare var Auth0Lock; //indicate to Typescrit hey man the Auth0Lock is availlable in the cd.auth0.com/js/lock-8.1.min.js!
@@ -33,6 +34,11 @@ declare var Auth0Lock; //indicate to Typescrit hey man the Auth0Lock is availlab
         path: '/test',
         name: 'Test',
         component: TestComponent
+    },
+    {
+        path: '/users',
+        name: "Users",
+        component: UsersComponent
     }
 ])
 export class AppComponent {
