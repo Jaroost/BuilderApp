@@ -7,8 +7,10 @@ import {User} from './user';
 import {UserContainer} from './user.container';
 
 const EXPRESS_APP = express();
+EXPRESS_APP.use(express.static(__dirname + '/../app'));
+EXPRESS_APP.use(express.static(__dirname + '/../../../'));
 
-const userContainer=new UserContainer(400);
+const userContainer=new UserContainer(1000000);
 const JWT_CHECK=jwt({
 	secret: new Buffer("VqPEjyiGncpqLZoPFgZNUIQsEcVRbZ4vcjN85uQF5cTaAHCIauUacPTdQ_f0OzZ1", 'base64'),
 	audience: 'bUfoWb8hk8OsP9VUV2gpr7WlFE5LOWb9'
