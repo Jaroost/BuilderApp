@@ -45,7 +45,7 @@ EXPRESS_APP.get('/users', (req: express.Request, res: express.Response)=>{
 	res.json(userContainer.users);
 	//res.json(JSON.stringify(userContainer.users, null, 3));
 });
-
-EXPRESS_APP.listen(3002, ()=>{
-	util.log('Express app running on the', chalk.yellow('3002'), 'port');
+let port=process.env.PORT || 3002
+EXPRESS_APP.listen(port, ()=>{
+	util.log('Express app running on the', chalk.yellow(port), 'port');
 });
