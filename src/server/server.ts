@@ -7,8 +7,10 @@ import {User} from './user';
 import {UserContainer} from './user.container';
 
 const EXPRESS_APP = express();
+EXPRESS_APP.use(express.static(__dirname + '/../app'));
+EXPRESS_APP.use(express.static(__dirname + '/../../../'));
 
-const userContainer=new UserContainer(400);
+const userContainer=new UserContainer(1000000);
 const JWT_CHECK=jwt({
 	secret: new Buffer("VqPEjyiGncpqLZoPFgZNUIQsEcVRbZ4vcjN85uQF5cTaAHCIauUacPTdQ_f0OzZ1", 'base64'),
 	audience: 'bUfoWb8hk8OsP9VUV2gpr7WlFE5LOWb9'
@@ -43,7 +45,7 @@ EXPRESS_APP.get('/users', (req: express.Request, res: express.Response)=>{
 	res.json(userContainer.users);
 	//res.json(JSON.stringify(userContainer.users, null, 3));
 });
-
-EXPRESS_APP.listen(3002, ()=>{
-	util.log('Express app running on the', chalk.yellow('3002'), 'port');
+let port=process.env.PORT || 3002
+EXPRESS_APP.listen(port, ()=>{
+	util.log('Express app running on the', chalk.yellow(port), 'port');
 });
