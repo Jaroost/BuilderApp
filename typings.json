@@ -1,7 +1,7 @@
 {
   "name": "builder_app",
   "globalDependencies": {
-    "browser-sync": "registry:dt/browser-sync#0.0.0+20160316155526",
+    "browser-sync": "registry:dt/browser-sync#0.0.0+20160524142403",
     "chalk": "registry:dt/chalk#0.4.0+20160317120654",
     "chokidar": "registry:dt/chokidar#1.4.3+20160316155526",
     "es6-shim": "registry:dt/es6-shim#0.31.2+20160317120654",
@@ -14,7 +14,8 @@
     "gulp-nodemon": "registry:dt/gulp-nodemon#0.0.0+20160316155526",
     "gulp-util": "registry:dt/gulp-util#0.0.0+20160316155526",
     "gulp-watch": "registry:dt/gulp-watch#4.1.1+20160316155526",
-    "lodash": "registry:dt/lodash#3.10.0+20160330154726",
+    "hammerjs": "registry:dt/hammerjs#2.0.8+20160724063812",
+    "lodash": "registry:dt/lodash#4.14.0+20160802150749",
     "micromatch": "registry:dt/micromatch#2.3.7+20160123140905",
     "mime": "registry:dt/mime#0.0.0+20160316155526",
     "node": "registry:dt/node#6.0.0+20160514165920",
