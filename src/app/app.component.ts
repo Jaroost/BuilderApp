@@ -7,7 +7,6 @@ import {HeroesComponent} from './heroes/heroes.component';
 import {ProfileComponent} from './profile/profile.component';
 import {TestComponent} from './test/test.component';
 import {UsersComponent} from './users/users.component';
-import {RootComponent} from './root/root.component';
 import { AuthHttp, tokenNotExpired , JwtHelper} from 'angular2-jwt';
 declare var Auth0Lock; //indicate to Typescrit hey man the Auth0Lock is availlable in the cd.auth0.com/js/lock-8.1.min.js!
 
@@ -19,28 +18,6 @@ declare var Auth0Lock; //indicate to Typescrit hey man the Auth0Lock is availlab
     directives: [HeroesComponent, ROUTER_DIRECTIVES, MATERIAL_DIRECTIVES, MdToolbar],
     providers: [ROUTER_PROVIDERS]
 })
-@RouteConfig([
-    {
-        path: '/',
-        name: 'Root',
-        component: RootComponent
-    },
-    {
-        path: '/profile',
-        name: 'Profile',
-        component: ProfileComponent
-    },
-    {
-        path: '/test',
-        name: 'Test',
-        component: TestComponent
-    },
-    {
-        path: '/users',
-        name: "Users",
-        component: UsersComponent
-    }
-])
 export class AppComponent {
     
   lock = new Auth0Lock('bUfoWb8hk8OsP9VUV2gpr7WlFE5LOWb9', 'antoinejaquet.eu.auth0.com');
