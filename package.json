@@ -35,6 +35,7 @@
     "@angular2-material/radio": "2.0.0-alpha.7-2", 
     "@angular2-material/sidenav": "2.0.0-alpha.7-2", 
     "@angular2-material/toolbar": "2.0.0-alpha.7-2",
+    "@angular2-material/icon": "2.0.0-alpha.7-2",
     "angular2-jwt": "*",
     "chalk": "*",
     "es6-promise": "*",
