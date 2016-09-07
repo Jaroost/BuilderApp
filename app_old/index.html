@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <base href="/">
+	<meta charset="UTF-8">
+	<title>Document</title>
+  <script src="lock-9.1.min.js"></script>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+</head>
+<body>
+	<my-app>loading..</my-app>
+  <script src="/node_modules/systemjs/dist/system-polyfills.src.js"></script>
+  <script src="/node_modules/reflect-metadata/Reflect.js"></script>
+  <script src="/node_modules/es6-shim/es6-shim.js"></script>
+  <script src="/node_modules/systemjs/dist/system.src.js"></script>
+  <link rel="stylesheet" href="node_modules/ng2-material/ng2-material.css">
+  <link rel="stylesheet" href="node_modules/ng2-material/font/font.css">
+	<script>
+			System.config({
+  "defaultJSExtensions": true,
+  "packageConfigPaths": [
+    "/node_modules/*/package.json",
+    "/node_modules/**/package.json",
+    "/node_modules/@angular/*/package.json",
+    "/node_modules/@angular2-material/*/package.json"
+  ],
+  "paths": {
+    "main": "/main",
+    "rxjs/*": "/rxjs/*",
+    "app/*": "/app/*",
+    "*": "/node_modules/*"
+  },
+  "packages": {
+    "rxjs": {
+      "defaultExtension": false
+    },
+    "angular2-jwt": {
+      "defaultExtension": "js"
+    }
+  }
+})
+  </script>
+	<script src="/node_modules/zone.js/dist/zone.js"></script>
+  <script src="/node_modules/rxjs/bundles/Rx.js"></script>
+  
+  <script>
+  System.import('main')
+    .catch(function (e) {
+      console.error(e, 'Report this error at https://github.com/jaroost/builder_app/issues');
+    });
+  </script>
+</body>
+</html>
