@@ -4,43 +4,48 @@
   <base href="/">
 	<meta charset="UTF-8">
 	<title>Document</title>
-  <script src="lock-9.1.min.js"></script>
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+  <script src="node_modules/core-js/client/shim.min.js"></script>
+  <script src="node_modules/zone.js/dist/zone.js"></script>
+  <script src="node_modules/reflect-metadata/Reflect.js"></script>
+  <script src="node_modules/systemjs/dist/system.src.js"></script>
 </head>
 <body>
 	<sd-app>loading..</my-app>
-  <script src="/node_modules/systemjs/dist/system-polyfills.src.js"></script>
-  <script src="/node_modules/reflect-metadata/Reflect.js"></script>
-  <script src="/node_modules/es6-shim/es6-shim.js"></script>
-  <script src="/node_modules/systemjs/dist/system.src.js"></script>
+
+  
 	<script>
-			System.config({
-  "defaultJSExtensions": true,
-  "packageConfigPaths": [
-    "/node_modules/*/package.json",
-    "/node_modules/**/package.json",
-    "/node_modules/@angular/*/package.json",
-    "/node_modules/@angular2-material/*/package.json"
-  ],
-  "paths": {
-    ["main"]: "/main",
-    "rxjs/*": "/rxjs/*",
-    "app/*": "/app/*",
-    "*": "/node_modules/*"
-  },
-  "packages": {
-    "rxjs": {
-      "defaultExtension": false
+			System.config(
+        {
+    defaultJSExtensions: true,
+    packageConfigPaths: [
+      `/node_modules/*/package.json`,
+      `/node_modules/**/package.json`,
+      `/node_modules/@angular/*/package.json`,
+      `/node_modules/@angular2-material/*/package.json`
+    ],
+    paths: {
+      ['main']: `/main`,
+      '@angular/common': `node_modules/@angular/common/bundles/common.umd.js`,
+      '@angular/compiler': `node_modules/@angular/compiler/bundles/compiler.umd.js`,
+      '@angular/core': `node_modules/@angular/core/bundles/core.umd.js`,
+      '@angular/forms': `node_modules/@angular/forms/bundles/forms.umd.js`,
+      '@angular/http': `node_modules/@angular/http/bundles/http.umd.js`,
+      '@angular/platform-browser': `node_modules/@angular/platform-browser/bundles/platform-browser.umd.js`,
+      '@angular/platform-browser-dynamic': `node_modules/@angular/platform-browser-dynamic/bundles/platform-browser-dynamic.umd.js`,
+      '@angular/router': `node_modules/@angular/router/index.js`,
+      'rxjs/*': `node_modules/rxjs/*`,
+      'app/*': `/app/*`,
+      '*': `node_modules/*`
     },
-    "angular2-jwt": {
-      "defaultExtension": "js"
+    packages: {
+      rxjs: { defaultExtension: 'js' }
     }
   }
-})
+      );
   </script>
-	<script src="/node_modules/zone.js/dist/zone.js"></script>
-  <script src="/node_modules/rxjs/bundles/Rx.js"></script>
   
   <script>
   System.import('main')
