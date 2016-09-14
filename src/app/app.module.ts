@@ -12,5 +12,4 @@ import {ToolbarModule} from './toolbar/toolbar.module';
   declarations: [AppComponent],
   bootstrap: [AppComponent]
 })
-
 export class AppModule { }

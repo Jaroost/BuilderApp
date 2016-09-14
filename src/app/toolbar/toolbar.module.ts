@@ -5,9 +5,10 @@ import { MdIconModule } from '@angular2-material/icon';
 import { MdGridListModule} from '@angular2-material/grid-list';
 import { ToolbarComponent } from './toolbar.component';
 import {AuthService} from '../auth/auth.service';
+import { BrowserModule } from '@angular/platform-browser';
 
 @NgModule({
-    imports: [MdToolbarModule, MdIconModule ,MdButtonModule, MdGridListModule],
+    imports: [MdToolbarModule, MdIconModule ,MdButtonModule, MdGridListModule, BrowserModule],
     declarations: [ToolbarComponent],
     exports: [ToolbarComponent],
     providers: [AuthService]
